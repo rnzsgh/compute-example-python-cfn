@@ -10,11 +10,13 @@ DEPLOYMENT_ID=my-test
 SEED_IMAGE=CHANGE_SEED_IMAGE_IN_YOUR_ACCOUNT
 ENV=dev
 TEMPLATE_BUCKET_NAME=poc-compute-example-cfn
+PROFILE=default
 
 aws cloudformation create-stack \
   --stack-name $STACK_NAME \
   --template-url https://s3.amazonaws.com/$TEMPLATE_BUCKET_NAME/compute.cfn.yml \
   --capabilities CAPABILITY_NAMED_IAM \
+  --profile $PROFILE \
   --parameters \
   ParameterKey=ModelBucketName,ParameterValue=$MODEL_BUCKET \
   ParameterKey=AvailabilityZone0,ParameterValue=$AZ_0 \
