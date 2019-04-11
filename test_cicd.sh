@@ -12,8 +12,8 @@ ENV=dev
 GITHUB_USER=
 GITHUB_TOKEN=
 
-GIT_REPO_API=compute-example-api
-GIT_REPO_WORKER=compute-example-worker
+GIT_REPO_API=compute-example-api-python
+GIT_REPO_WORKER=compute-example-worker-python
 GIT_BRANCH_API=master
 GIT_BRANCH_WORKER=master
 
